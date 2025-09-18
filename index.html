@@ -1,0 +1,33 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Pigeon Budget — Local MVP</title>
+
+    <!-- ✅ Tailwind CDN（免配置、马上可用） -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+      // 扩展品牌色，保证我们UI一致
+      tailwind.config = {
+        theme: {
+          extend: {
+            colors: {
+              pigeon: {
+                50:'#f2fbf6',100:'#e4f7ed',200:'#c6eedb',300:'#99e0c1',
+                400:'#66cda2',500:'#3fbf89',600:'#2ba372',700:'#23835c',
+                800:'#1f694c',900:'#1b5740'
+              }
+            },
+            boxShadow: { soft: '0 8px 30px rgba(0,0,0,0.06)' },
+            borderRadius: { xl2: '1.25rem' }
+          }
+        }
+      }
+    </script>
+  </head>
+  <body class="bg-gray-50 text-gray-900">
+    <div id="root"></div>
+    <script type="module" src="/src/main.tsx"></script>
+  </body>
+</html>

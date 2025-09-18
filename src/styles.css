@@ -1,0 +1,13 @@
+:root{ --card-r: 1.25rem; }
+
+.card{
+  border-radius: 1rem;          /* ≈ rounded-2xl */
+  background: #fff;
+  box-shadow: 0 8px 30px rgba(0,0,0,.06);
+}
+.card-hover{ transition: transform .15s ease; }
+.card-hover:hover{ transform: translateY(-2px); }
+
+/* Dark mode */
+html.dark body{ background:#0f172a; color:#e2e8f0; }  /* slate-900 / slate-100 */
+html.dark .card{ background:#1f2937; }               /* slate-800 */
