@@ -1,70 +1,68 @@
-# React + TypeScript + Vite
+# 🐦 Pigeon Budget
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+A modern, high-fidelity budgeting web application built with **React (Vite + TypeScript)**, **TailwindCSS**, and **Zustand**.  
+It helps students and young families track income, expenses, savings goals, and gain financial insights — with both desktop and mobile optimized layouts.
 
-Currently, two official plugins are available:
+---
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+## ✨ Features
 
-## Expanding the ESLint configuration
+- **Dashboard Overview**  
+  Summarized KPIs (Income / Expense / Net), daily net flow line chart, and expense breakdown by category.
 
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
+- **Transactions Management**  
+  - Add new transactions with date, type, merchant, category, and amount.  
+  - Inline deletion with undo support.  
+  - Search and filter for quick access.
 
-```js
-export default tseslint.config([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
+- **Budgets**  
+  - Create/update budgets by category.  
+  - Visual progress bars with over-budget warnings.
 
-      // Remove tseslint.configs.recommended and replace with this
-      ...tseslint.configs.recommendedTypeChecked,
-      // Alternatively, use this for stricter rules
-      ...tseslint.configs.strictTypeChecked,
-      // Optionally, add this for stylistic rules
-      ...tseslint.configs.stylisticTypeChecked,
+- **Savings Goals**  
+  - Define goals with target amount and date.  
+  - Update savings via quick increment buttons (+50, +100, +500) or custom amounts.  
+  - Progress bar with dynamic monthly suggestion.
 
-      // Other configs...
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
-```
+- **Insights**  
+  - Daily expenses chart and category pie chart.  
+  - Supports light/dark mode with adjusted colors.
 
-You can also install [eslint-plugin-react-x](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-dom) for React-specific lint rules:
+- **Premium Upgrade (A$10/month demo)**  
+  - Unlocks auto-categorisation, CSV import/export, multi-accounts, family sharing, smart alerts, and priority support.  
+  - State stored locally (no real payment).
 
-```js
-// eslint.config.js
-import reactX from 'eslint-plugin-react-x'
-import reactDom from 'eslint-plugin-react-dom'
+- **Mobile Responsive Design**  
+  - Five-tab bottom navigation (Home, Dashboard, Transactions, Budgets, Goals/Insights).  
+  - Optimized layouts for smaller screens.
 
-export default tseslint.config([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
-      // Enable lint rules for React
-      reactX.configs['recommended-typescript'],
-      // Enable lint rules for React DOM
-      reactDom.configs.recommended,
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
-```
-# pigeonbudget
+---
+
+## 🛠 Tech Stack
+
+- **Frontend:** React 18 (Vite + TypeScript)  
+- **State Management:** Zustand + Middleware  
+- **Styling:** TailwindCSS, custom dark mode  
+- **Forms & Validation:** React Hook Form + Zod  
+- **Charts:** Recharts  
+- **Internationalization:** i18next (future extension)
+
+---
+
+## 📂 Project Structure
+
+```bash
+pigeon-budget/
+├── public/               # Static assets
+├── src/
+│   ├── assets/           # Images, icons
+│   ├── components/       # Shared UI components
+│   ├── pages/            # Route-based pages (Home, Dashboard, etc.)
+│   ├── store/            # Zustand store (state management)
+│   ├── App.tsx           # Root app
+│   ├── main.tsx          # Entry point
+│   └── index.css         # Tailwind base styles
+├── package.json
+├── tsconfig.json
+├── vite.config.ts
+└── README.md
